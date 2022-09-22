@@ -3,3 +3,14 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
+patches:
+      - patch: |
+          apiVersion: v1
+          kind: ServiceAccount
+          metadata:
+            name: kustomize-controller
+            annotations:
+              eks.amazonaws.com/role-arn: "arn:aws:iam::290913681714:role/eksctl-devops82-addon-iamserviceaccount-flux-Role1-FHUQXFHQGVAZ" 
+        target:
+            kind: ServiceAccount
+            name: kustomize-controller
