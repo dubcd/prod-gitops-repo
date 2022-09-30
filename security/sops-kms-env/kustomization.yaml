@@ -4,6 +4,6 @@ namespace: default
 secretGenerator:
   - name: prod-secrets-env
     envs:
-    - prod-secrets-env.env
+    - secrets/env-prod-secrets.env
     options:
       disableNameSuffixHash: true
