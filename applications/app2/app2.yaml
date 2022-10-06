@@ -55,30 +55,9 @@ spec:
         # env:
         # # - name: webapi6_UI_COLOR
         # #  value: "#34577c"
-        # - name: webapi6_UI_COLOR
-        #   valueFrom:
-        #     secretKeyRef:
-        #       name: prod-secrets
-        #       key: webapi6UIColor
-        #       optional: false
-        # livenessProbe:
-        #   exec:
-        #     command:
-        #     - podcli
-        #     - check
-        #     - http
-        #     - localhost:9898/healthz
-        #   initialDelaySeconds: 5
-        #   timeoutSeconds: 5
-        # readinessProbe:
-        #   exec:
-        #     command:
-        #     - podcli
-        #     - check
-        #     - http
-        #     - localhost:9898/readyz
-        #   initialDelaySeconds: 5
-        #   timeoutSeconds: 5
+        volumeMounts:
+          - name: appsetting
+            mountPath: "/app/inject123" 
         resources:
           limits:
             cpu: 200m
@@ -86,3 +65,7 @@ spec:
           requests:
             cpu: 10m
             memory: 16Mi
+      volumes:
+        - name: appsetting
+          secret:
+            secretName: webapi6-config
