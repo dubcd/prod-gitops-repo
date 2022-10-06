@@ -4,6 +4,6 @@ namespace: webapi6
 secretGenerator:
   - name: webapi6-config
     envs:
-    - secrets/appsettings.json
+    - secrets/appsetting.json
     options:
       disableNameSuffixHash: true
