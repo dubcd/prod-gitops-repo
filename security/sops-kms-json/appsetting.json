@@ -1,0 +1,31 @@
+{
+	"Logging": {
+		"LogLevel": {
+			"Default": "ENC[AES256_GCM,data:Bqy80ROrLTKbea8=,iv:7v+taBKiDMF4dGIn40p8bBH1uCos6J1NhNxuOFG8990=,tag:ot4zECvFkMOGhTTJ/lhKWA==,type:str]",
+			"Microsoft.AspNetCore": "ENC[AES256_GCM,data:aGk3hEkXig==,iv:LcRp+99RvWq1/k1z9nuhEzaIMs9VkWmE7Apda/U4XDM=,tag:yg5oPNF3SS52iQj1BZ+xEw==,type:str]"
+		}
+	},
+	"AllowedHosts": "ENC[AES256_GCM,data:xQ==,iv:It6GdIeimsEpfTuCzxr2c26nZmBQ/zMQtcKL4bLkc68=,tag:G/R9cIhEmnVymH6ZWS/EwA==,type:str]",
+	"ConnectionStrings": {
+		"MovieContext": "ENC[AES256_GCM,data:gSP96Q8CXfJdX1DXSjlkuD1ekC+80B/SuPsdf4brPX8Dvole29v3sqfRWtn4/byzjY4U8aSoQCuj/vD/Ah/lZG+3fdn9WUJNvUedFbuaKXVdM+GquErSkvrC2haIZFXkPq08vtizh5tW8+LMqlRreaBQQHhomg==,iv:xgPcZkiTXUILHa1rxwbMJ4S0jf0CsyLIrqXw3fIGzJQ=,tag:dhLVn/5vJFHtvpVysH1NGw==,type:str]"
+	},
+	"sops": {
+		"kms": [
+			{
+				"arn": "arn:aws:kms:ap-southeast-1:290913681714:key/1796f0f2-aac7-420d-8564-9752474ca139",
+				"created_at": "2022-10-06T04:44:46Z",
+				"enc": "AQICAHh/p3Y5wT+GvOKcDu1862fWeDNLigIJZ4leLATFaMKwuwG60Rr9qNN9foPZpVJ8+PxbAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMsfVlUswS8SzT3UsAAgEQgDuaWwFTkI1YttPCBJaGiCqTPEw+eRGNzmCQKDLZhxg65Do+iSzxs28mBShySYNhqAjcJewwEWCdZmocJg==",
+				"aws_profile": ""
+			}
+		],
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": null,
+		"lastmodified": "2022-10-06T04:44:47Z",
+		"mac": "ENC[AES256_GCM,data:AjWL4cj0j7Ou/NyKbbwfjIb0RgTC+Dsy2vNWrUQp6ebRveZ4bbs4HtoYPrlNEY1OTvAU0/YeBAGV8TjF00BFph8MTBU1bl5aflznegCFzn5pLMi3WEXOHRvgq/rceWHcckuy67ABVLf7iPcuvfzYMHSoGdRvAB8EBwqd05rdTVc=,iv:nzdVv5irDL4PvRCKowCFN0QZ+W2TX4L0tWJqHJIEw2I=,tag:uAFWzdnZaCEPauhVaE2MrA==,type:str]",
+		"pgp": null,
+		"unencrypted_suffix": "_unencrypted",
+		"version": "3.7.3"
+	}
+}

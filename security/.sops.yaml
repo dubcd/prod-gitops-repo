@@ -4,3 +4,5 @@ creation_rules:
     kms: arn:aws:kms:ap-southeast-1:290913681714:key/1796f0f2-aac7-420d-8564-9752474ca139
   - path_regex: .*.env
     kms: arn:aws:kms:ap-southeast-1:290913681714:key/1796f0f2-aac7-420d-8564-9752474ca139
+  - path_regex: .*.json
+    kms: arn:aws:kms:ap-southeast-1:290913681714:key/1796f0f2-aac7-420d-8564-9752474ca139
