@@ -1,0 +1,88 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: webapi6
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapi6
+  namespace: webapi6
+spec:
+  type: LoadBalancer
+  selector:
+    app: webapi6
+  ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: http
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapi6
+  namespace: webapi6
+  # annotations:
+  #   secret.reloader.stakater.com/reload: "prod-secrets"
+spec:
+  minReadySeconds: 3
+  revisionHistoryLimit: 5
+  progressDeadlineSeconds: 60
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 0
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: webapi6
+  template:
+    metadata:
+      labels:
+        app: webapi6
+    spec:
+      containers:
+      - name: webapi6
+        image: 290913681714.dkr.ecr.ap-southeast-1.amazonaws.com/gitops/testwebapi6:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: http
+          containerPort: 80
+          protocol: TCP
+        # command:
+        # - ./webapi6
+        # env:
+        # # - name: webapi6_UI_COLOR
+        # #  value: "#34577c"
+        # - name: webapi6_UI_COLOR
+        #   valueFrom:
+        #     secretKeyRef:
+        #       name: prod-secrets
+        #       key: webapi6UIColor
+        #       optional: false
+        # livenessProbe:
+        #   exec:
+        #     command:
+        #     - podcli
+        #     - check
+        #     - http
+        #     - localhost:9898/healthz
+        #   initialDelaySeconds: 5
+        #   timeoutSeconds: 5
+        # readinessProbe:
+        #   exec:
+        #     command:
+        #     - podcli
+        #     - check
+        #     - http
+        #     - localhost:9898/readyz
+        #   initialDelaySeconds: 5
+        #   timeoutSeconds: 5
+        resources:
+          limits:
+            cpu: 200m
+            memory: 256Mi
+          requests:
+            cpu: 10m
+            memory: 16Mi
