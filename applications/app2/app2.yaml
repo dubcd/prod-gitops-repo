@@ -57,7 +57,7 @@ spec:
         # #  value: "#34577c"
         volumeMounts:
           - name: appsetting
-            mountPath: "/app/inject123" 
+            mountPath: "/app" 
         resources:
           limits:
             cpu: 200m
