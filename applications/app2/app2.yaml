@@ -44,7 +44,7 @@ spec:
     spec:
       containers:
       - name: webapi6
-        image: 290913681714.dkr.ecr.ap-southeast-1.amazonaws.com/gitops/testwebapi6:amd64-local
+        image: 290913681714.dkr.ecr.ap-southeast-1.amazonaws.com/gitops/testwebapi6:amd64
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
