@@ -4,9 +4,9 @@ metadata:
   name: security-sync
   namespace: flux-system
 spec:
-  targetNamespace: default
+  targetNamespace: webapi6
   interval: 1m0s
-  path: ./security/sops-kms-env
+  path: ./security/sops-kms-json
   prune: true
   wait: true
   sourceRef:
