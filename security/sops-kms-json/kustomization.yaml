@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: webapi6
 secretGenerator:
   - name: webapi6-config
-    envs:
+    files:
     - secrets/appsetting.json
     options:
       disableNameSuffixHash: true
