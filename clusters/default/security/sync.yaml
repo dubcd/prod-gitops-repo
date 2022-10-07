@@ -11,6 +11,6 @@ spec:
   wait: true
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: secretrepo
   decryption:
     provider: sops
