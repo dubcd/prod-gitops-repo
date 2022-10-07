@@ -6,7 +6,7 @@ metadata:
 spec:
   targetNamespace: webapi6
   interval: 1m0s
-  path: ./security/sops-kms-json
+  path: ./security/sops-kms-env
   prune: true
   wait: true
   sourceRef:
