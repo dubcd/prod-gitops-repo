@@ -4,6 +4,7 @@ metadata:
   name: webapi6
   namespace: flux-system
 spec:
+  targetNamespace: webapi6
   interval: 1m0s
   path: ./applications/app2
   prune: true
