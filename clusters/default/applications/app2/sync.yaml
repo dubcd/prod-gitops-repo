@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
-  path: ./applications/app2
+  path: ./applications/app2/app2.yaml
   prune: true
   wait: true
   sourceRef:

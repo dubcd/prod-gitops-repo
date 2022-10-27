@@ -16,7 +16,7 @@ patches:
       kind: Deployment
       name: webapi6
       namespace: webapi6
-# images:
-#   - name: 290913681714.dkr.ecr.ap-southeast-1.amazonaws.com/gitops/testwebapi6:amd64
-#     newName: docker.io
-#     newTag: prod-2
+images:
+  - name: 290913681714.dkr.ecr.ap-southeast-1.amazonaws.com/gitops/testwebapi6:amd64
+    newName: docker.io
+    newTag: prod-2
