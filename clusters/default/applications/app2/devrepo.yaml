@@ -10,4 +10,4 @@ spec:
   secretRef:
     name: gitops-dev-auth
   timeout: 60s
-  url: ssh://git@github.com/anakhub/gitops-dev-repo
+  url: ssh://git@github.com/anakhub/dev-gitops-repo
