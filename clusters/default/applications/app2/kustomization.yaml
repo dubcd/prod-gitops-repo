@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
 - devrepo.yaml
 - sync.yaml
+- app2.yaml
 patches:
       - patch: |
           apiVersion: apps/v1
