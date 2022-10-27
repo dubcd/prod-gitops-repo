@@ -4,18 +4,16 @@ resources:
 - devrepo.yaml
 - sync.yaml
 patches:
-  - patch: |
-      apiVersion: apps/v1
-      kind: Deployment
-      metadata:
-        name: webapi6
-        namespace: webapi6
-        annotations:
-          secret.reloader.stakater.com/reload: "webapi6-config"
-    target:
-      kind: Deployment
-      name: webapi6
-      namespace: webapi6
+      - patch: |
+          apiVersion: apps/v1
+          kind: Deployment
+          metadata:
+            name: webapi6
+            annotations:
+              secret.reloader.stakater.com/reload: "webapi6-config"
+        target:
+          kind: Deployment
+          name: webapi6
 # images:
 #   - name: 290913681714.dkr.ecr.ap-southeast-1.amazonaws.com/gitops/testwebapi6:amd64
 #     newName: docker.io
