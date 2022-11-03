@@ -11,7 +11,7 @@ patches:
           metadata:
             name: webapi6
             annotations:
-              secret.reloader.stakater.com/reload: "webapi6-config"
+              secret.reloader.stakater.com/reload: "webapi6-config2"
         target:
           kind: Deployment
           name: webapi6
