@@ -24,8 +24,8 @@ kind: Deployment
 metadata:
   name: webapi6
   namespace: webapi6
-  # annotations:
-  #   secret.reloader.stakater.com/reload: "webapi6-config"
+  annotations:
+    secret.reloader.stakater.com/reload: "webapi6-config"
 spec:
   # minReadySeconds: 3
   # revisionHistoryLimit: 5
