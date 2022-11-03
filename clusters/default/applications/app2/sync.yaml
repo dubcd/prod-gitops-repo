@@ -6,8 +6,8 @@ metadata:
 spec:
   targetNamespace: webapi6
   interval: 1m0s
-  # path: ./applications/app2
-  path: ./clusters/default/applications/app2
+  path: ./applications/app2
+  # path: ./clusters/default/applications/app2
   prune: true
   wait: true
   sourceRef:
