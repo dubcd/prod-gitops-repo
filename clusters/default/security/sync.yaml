@@ -14,3 +14,21 @@ spec:
     name: secretrepo
   decryption:
     provider: sops
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: notify-sync
+  namespace: flux-system
+spec:
+  targetNamespace: flux-system
+  interval: 1m0s
+  path: ./security/sops-kms-notify
+  prune: true
+  wait: true
+  sourceRef:
+    kind: GitRepository
+    name: secretrepo
+  decryption:
+    provider: sops
+  
