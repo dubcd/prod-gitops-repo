@@ -10,7 +10,7 @@ patches:
           metadata:
             name: kustomize-controller
             annotations:
-              eks.amazonaws.com/role-arn: "arn:aws:iam::290913681714:role/eksctl-devops82-addon-iamserviceaccount-flux-Role1-FHUQXFHQGVAZ"
+              eks.amazonaws.com/role-arn: "arn:aws:iam::290913681714:role/eksctl-devops82-addon-iamserviceaccount-flux-external-secrets"
         target:
             kind: ServiceAccount
             name: kustomize-controller
