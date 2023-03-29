@@ -42,7 +42,6 @@ spec:
       labels:
         app: webapi6
     spec:
-      replicas: 0
       containers:
       - name: webapi6
         image: 290913681714.dkr.ecr.ap-southeast-1.amazonaws.com/gitops/testwebapi6:amd64
